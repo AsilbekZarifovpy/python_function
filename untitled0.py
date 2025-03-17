@@ -117,3 +117,160 @@ Created on Sun Mar 16 20:50:05 2025
         
 
 # qoldiq(14)
+
+
+
+
+# 17.03.2025
+
+
+# def yosh_hisobla(ism, yosh):
+#     return ism, yosh
+
+
+# talaba = yosh_hisobla(ism=input("ismingiz nma "), yosh=input("Yoshingiz nechida "))
+
+# def toliq_ism_yasa(ism, familiya, otasining_ismi=''):
+#     """Toliq isma qaytaruvchi funksiya"""
+#     if otasining_ismi: # otasining_ismi mavjudligini tekshiramiz
+#         toliq_ism = f"{ism} {otasining_ismi} {familiya}"
+#     else:
+#         toliq_ism = f"{ism} {familiya}"
+#     return toliq_ism.title()
+# talaba1 = toliq_ism_yasa('olim','hakimov') #otasining_ismi kiritilmadi
+# talaba2 = toliq_ism_yasa('hakim','olimov','abrorovich')
+# print(f"Darsga kelmagan talabalar: {talaba1} va {talaba2}")
+
+
+
+# def avto_info(kompaniya, model, rangi, korobka, yili, narhi=None):
+#     avto = {'kompaniya':kompaniya,
+#             'model':model,
+#             'rang':rangi,
+#             'korobka':korobka,
+#             'yil':yili,
+#             'narh':narhi}
+#     return avto
+
+
+
+# avto1 = avto_info('GM','Malibu','Qora','Avtomat',2018)
+# avto2 = avto_info('GM','Gentra','Oq','Mexanika',2016,15000)
+# avtolar = [avto1, avto2]
+# print('Onlayn bozordagi mavjud avtomashinalar:')
+# for avto in avtolar:
+#     if avto['narh']:
+#         narh = avto['narh']
+#     else:
+#         narh = "Noma'lum"
+#     print(f"{avto['rang']} {avto['model']}. Narhi: {narh}")
+
+
+
+# def oraliq(min, max, qadam='1'):
+#     sonlar = []
+#     while min<=max:
+#         sonlar.append(min)
+#         min += int(qadam)
+#     return sonlar
+
+# son = oraliq(1,25)
+
+# def avto_info(kompaniya, model, rangi, korobka, yili, narhi=None):
+#     avto = {'kompaniya':kompaniya,
+#             'model':model,
+#             'rang':rangi,
+#             'korobka':korobka,
+#             'yil':yili,
+#             'narh':narhi}
+#     return avto
+
+# print("Saytimizdagi avtolar ro'yxatini shakllantiramiz.")
+# avtolar=[] # salondagi avtolar uchun bo'sh ro'yxat
+# while True:
+#     print("\nQuyidagi ma'lumotlarni kiriting",end='')
+#     kompaniya=input("Ishlab chiqaruvchi: ")
+#     model=input("Modeli: ")
+#     rangi=input("Rangi: ")
+#     korobka=input("Korobka: ")
+#     yili=input("Ishlab chiqarilgan yili: ")
+#     narhi=input("Narhi: ")
+    
+#     #Foydalanuvchi kiritdan ma'lumotlardan avto_info yordamida 
+#     #lug'at shakllantirib, har bir lug'atni ro'yxatga qo'shamiz:
+#     avtolar.append(avto_info(kompaniya, model, rangi, korobka, yili, narhi))
+    
+#     # Yana avto qo'shish-qo'shmaslikni so'raymiz
+#     javob = input("Yana avto qo'shasizmi? (yes/no): ")
+#     if javob=='no':
+#         break
+
+
+
+
+#1-Task
+
+# def User(name, familyname, age, location, hometown, pheno_number=None):
+#     user = {'name':name,
+#             'familyname':familyname,
+#             'age':age,
+#             'location':location,
+#             'hometown':hometown,
+#             'pheno_number':pheno_number}
+#     return user
+
+
+
+# User('Asilbek', 'Zarifov', 21, 'toshkent', 'Kitob')
+
+# print("Saytimizdagi User lar  ro'yxatini shakllantiramiz.")
+
+# users = []
+# while True:
+#     print("\nQuyidagi ma'lumotlarni kiriting",end='')
+#     name = input("user ismi ")
+#     familyname = input("user familiyasi ")
+#     age = input("user yoshi ")
+#     location = input("user location ni ")
+#     hometown = input("user ning  hometown ")
+#     pheno_number = input("user ning  pheno_number ")
+#     users.append(User(name, familyname, age, location, hometown, pheno_number))
+    
+#     javob = input("Yana user qo'shasizmi? (yes/no): ")
+#     if javob=='no':
+#         break
+ 
+
+
+
+# def taqqosla(a,b,c):
+#     if a>=b and a>=c:
+#         print(a)
+#     elif b>=a and b>=c:
+#         print(b)
+#     else:
+#         print(c)
+ 
+# taqqosla(1, 5, 3)
+
+def tub_sonlar_top(min, max):
+    tub_sonlar = []
+    for n in range(min, max + 1):
+        tub = True
+        if n == 1:
+            tub = False
+        elif n == 2:
+            tub = True
+        else:
+            for x in range(2, n):
+                if n % x == 0:
+                    tub = False
+        if tub:
+            tub_sonlar.append(n)
+
+    return tub_sonlar
+            
+    
+    
+    
+    
