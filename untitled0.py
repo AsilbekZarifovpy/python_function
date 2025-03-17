@@ -253,24 +253,67 @@ Created on Sun Mar 16 20:50:05 2025
  
 # taqqosla(1, 5, 3)
 
-def tub_sonlar_top(min, max):
-    tub_sonlar = []
-    for n in range(min, max + 1):
-        tub = True
-        if n == 1:
-            tub = False
-        elif n == 2:
-            tub = True
-        else:
-            for x in range(2, n):
-                if n % x == 0:
-                    tub = False
-        if tub:
-            tub_sonlar.append(n)
+# def tub_sonlar_top(min, max):
+#     tub_sonlar = []
+#     for n in range(min, max + 1):
+#         tub = True
+#         if n == 1:
+#             tub = False
+#         elif n == 2:
+#             tub = True
+#         else:
+#             for x in range(2, n):
+#                 if n % x == 0:
+#                     tub = False
+#         if tub:
+#             tub_sonlar.append(n)
 
-    return tub_sonlar
+#     return tub_sonlar
             
     
+# def bahola(ismlar):
+#     baholar = {}
+#     while ismlar:
+#         ism = ismlar.pop()
+#         baho = input(f"Talaba {ism.title()}ning bahosini kiriting: ")
+#         baholar[ism]=baho
+#     return baholar
+
+# talabalar = ['ali', 'vali', 'hasan', 'husan']
+# baholar = bahola(talabalar)
+# print(baholar)
+
     
-    
+
+# def katta_harf(ism):
+#     kattalist = []
+#     for ism2 in ism:
+#         kattalist.append(ism2.capitalize())
+#     return kattalist
+
+
+
+
+
+# ismlar = ['ali', 'vali', 'hasan', 'husan']
+# katta_harf(ismlar)
+
+
+# def summa(*sonlar):
+#     """Kiritilgan sonlar yig'indisini hisoblaydigan funksiya"""
+#     yigindi = 1
+#     for son in sonlar:
+#         yigindi *= son
+#     return yigindi
+
+# print(summa(1,2,35))
+
+def talaba_info(ism, familiya, **kwargs):
+    kwargs['ism']=ism
+    kwargs['familiya']=familiya
+    return kwargs
+
+talaba = talaba_info('olim','olimov',tyil=1995,fakultet='IT',yonalish='AT')
+
+
     
